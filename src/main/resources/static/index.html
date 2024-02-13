@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinobilletter Bestilling</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+<div class="container mx-auto mt-8 p-6 bg-white rounded-lg shadow-xl">
+    <h1 class="text-2xl font-bold mb-6 text-center">Bestilling av kinobilletter</h1>
+
+    <form id="billettForm">
+        <!-- Filmvalg -->
+        <div class="mb-4">
+            <label for="film" class="block text-gray-700 text-sm font-bold mb-2">Velg film:</label>
+            <select id="film" name="film" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                <option>Velg film her</option>
+                <option value="Ringenes Herre 1">Ringenes Herre 1</option>
+                <option value="Ringenes Herre 2">Ringenes Herre 2</option>
+                <option value="Ringenes Herre 3">Ringenes Herre 3</option>
+                <option value="Ringenes Herre 4">Ringenes Herre 4</option>
+            </select>
+        </div>
+
+        <!-- Antall -->
+        <div class="mb-4">
+            <label for="antall" class="block text-gray-700 text-sm font-bold mb-2">Antall:</label>
+            <input type="number" id="antall" name="antall" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Fyll inn antall billetter" required>
+        </div>
+
+        <!-- Navn -->
+        <div class="mb-4">
+            <label for="fornavn" class="block text-gray-700 text-sm font-bold mb-2">Fornavn:</label>
+            <input type="text" id="fornavn" name="fornavn" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Trond" required>
+        </div>
+
+        <!-- Etternavn -->
+        <div class="mb-4">
+            <label for="etternavn" class="block text-gray-700 text-sm font-bold mb-2">Etternavn:</label>
+            <input type="text" id="etternavn" name="etternavn" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Tran" required>
+        </div>
+
+        <!-- Telefon -->
+        <div class="mb-4">
+            <label for="telefonnr" class="block text-gray-700 text-sm font-bold mb-2">Telefonnr:</label>
+            <input type="tel" id="telefonnr" name="telefonnr" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Randomass phonenumber" required>
+        </div>
+
+        <!-- Epost -->
+        <div class="mb-6">
+            <label for="epost" class="block text-gray-700 text-sm font-bold mb-2">Epost:</label>
+            <input type="email" id="epost" name="epost" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="epost" required>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex items-center justify-between">
+            <button id="kjopBillett" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                Kjøp billett
+            </button>
+            <button id="slettAlle" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                Slett alle billettene
+            </button>
+        </div>
+    </form>
+
+
+    <!-- Liste -->
+    <div class="mt-8">
+        <h2 class="text-xl font-bold mb-4">Alle billetter</h2>
+
+        <div class="mt-8">
+            <h2 class="text-xl font-bold mb-4 text-center">Alle billetter</h2>
+
+            <table id="billettListe" class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                <tr>
+                    <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Film
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Antall
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Fornavn
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Etternavn
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Telefonnr
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Epost
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    </div>
+    </body>
+</html>
